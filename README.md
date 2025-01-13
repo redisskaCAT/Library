@@ -1,55 +1,70 @@
-# Приложение - Личный кабинет библиотекаря
+# Librarian's Personal Dashboard
 
-Это веб-приложение, разработанное в рамках задания курса **«Технологии разработки веб-приложений»**, Вариант: **ТРВП-003**. Приложение представляет собой личный кабинет библиотекаря для управления выдачей книг читателям. Оно реализует функциональные требования (CRUD-операции) и соответствует следующим техническим требованиям.
+This web application was developed as part of the **"Web Application Development Technologies"** course assignment. It serves as a personal dashboard for librarians to manage book loans to readers. The application implements CRUD operations and adheres to the specified technical requirements.
 
-## Технические требования
+## Showcase
 
-1. **Клиентская часть**:
-   - Реализована с использованием HTML, CSS и JavaScript.
-   - Для создания пользовательского интерфейса можно использовать любые библиотеки/фреймворки, такие как React, Angular и др.
+A quick demonstration of the application is available below:
 
-2. **Серверная часть**:
-   - Разработана на JavaScript с использованием платформы Node.js.
-   - Для создания сервера разрешено использовать любые библиотеки/фреймворки (например, Express.js).
+![Showcase](showcase/Library.mp4)
+
+## Technical Requirements
+
+1. **Client-side**:
+   - Built with HTML, CSS, and JavaScript.
+   - Supports the use of any libraries/frameworks (e.g., React, Angular).
+
+2. **Server-side**:
+   - Developed using JavaScript with the Node.js platform.
+   - Frameworks such as Express.js are permitted.
 
 3. **API**:
-   - Взаимодействие между клиентом и сервером осуществляется через REST-like API.
+   - Communication between the client and server occurs through a REST-like API.
 
-4. **База данных**:
-   - Данные хранятся в базе данных. Можно использовать любую СУБД, которая поддерживает подключение из JavaScript-кода.
+4. **Database**:
+   - Data is stored in a database. Any DBMS compatible with JavaScript can be used.
 
-5. **Дополнительные технологии**:
-   - Вместо JavaScript можно использовать TypeScript.
-
----
-
-## Функционал приложения
-
-### Работа с читателями:
-- Добавление нового читателя.
-- Удаление читателя.
-- Редактирование информации о читателе (ФИО).
-- Указание списка книг, выданных читателю на руки.
-
-### Работа с книгами:
-- Добавление книг читателю.
-- Удаление книг из списка читателя.
-- Перевод книги от одного читателя к другому.
-
-### Управление книгами в библиотеке:
-- Список доступных книг задается изначально и может быть изменен через интерфейс.
-- Хранение информации о книгах:
-  - Автор (ФИО).
-  - Название.
-  - Количество доступных экземпляров.
+5. **Additional Technologies**:
+   - TypeScript can be used instead of JavaScript.
 
 ---
 
-## Основные правила работы
+## Application Features
 
-- У каждого читателя может быть максимум **N** книг на руках (задается разработчиком).
-- Читателю нельзя выдавать:
-  - Книгу, которая уже есть у него на руках.
-  - Книгу, если превышен лимит книг.
-- В обоих случаях выводится уведомление с указанием причины.
-- При выдаче или возврате книги обновляется количество доступных экземпляров в библиотеке.
+### Reader Management
+- Add a new reader.
+- Delete a reader.
+- Edit reader details (e.g., name).
+- Manage the list of books borrowed by a reader.
+
+### Book Management
+- Assign books to a reader.
+- Remove books from a reader's borrowed list.
+- Transfer books between readers.
+
+### Library Book Management
+- Modify the list of available books.
+- Store book information:
+  - Author (Full Name).
+  - Title.
+  - Number of available copies.
+
+---
+
+## Core Rules
+
+- A reader can borrow up to **N** books (defined during development).
+- Borrowing restrictions:
+  - A reader cannot borrow a book they already have.
+  - A reader cannot borrow more books than allowed by the limit.
+- Notifications will display the reason for a failed borrowing attempt.
+- The number of available book copies updates automatically upon loan or return.
+
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js
+- A database (e.g., MySQL, MongoDB)
+
