@@ -3,9 +3,6 @@
 This web application was developed as part of the **"Web Application Development Technologies"** course assignment. It serves as a personal dashboard for librarians to manage book loans to readers. The application implements CRUD operations and adheres to the specified technical requirements.
 
 
-## Showcase
-<img src="https://github.com/redisskaCAT/Library/blob/main/showcase/Library.mp4" width="640"/>
-
 
 ## Technical Requirements
 
