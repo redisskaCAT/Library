@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# Приложение для управления библиотекой
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Это веб-приложение, разработанное в рамках задания курса **«Технологии разработки веб-приложений»**, Вариант: **ТРВП-003**. Приложение представляет собой личный кабинет библиотекаря для управления выдачей книг читателям. Оно реализует функциональные требования (CRUD-операции) и соответствует следующим техническим требованиям.
 
-## Available Scripts
+## Технические требования
 
-In the project directory, you can run:
+1. **Клиентская часть**:
+   - Реализована с использованием HTML, CSS и JavaScript.
+   - Для создания пользовательского интерфейса можно использовать любые библиотеки/фреймворки, такие как React, Angular и др.
 
-### `npm start`
+2. **Серверная часть**:
+   - Разработана на JavaScript с использованием платформы Node.js.
+   - Для создания сервера разрешено использовать любые библиотеки/фреймворки (например, Express.js).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. **API**:
+   - Взаимодействие между клиентом и сервером осуществляется через REST-like API.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4. **База данных**:
+   - Данные хранятся в базе данных. Можно использовать любую СУБД, которая поддерживает подключение из JavaScript-кода.
 
-### `npm test`
+5. **Дополнительные технологии**:
+   - Вместо JavaScript можно использовать TypeScript.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Функционал приложения
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Работа с читателями:
+- Добавление нового читателя.
+- Удаление читателя.
+- Редактирование информации о читателе (ФИО).
+- Указание списка книг, выданных читателю на руки.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Работа с книгами:
+- Добавление книг читателю.
+- Удаление книг из списка читателя.
+- Перевод книги от одного читателя к другому.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Управление книгами в библиотеке:
+- Список доступных книг задается изначально и может быть изменен через интерфейс.
+- Хранение информации о книгах:
+  - Автор (ФИО).
+  - Название.
+  - Количество доступных экземпляров.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Основные правила работы
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- У каждого читателя может быть максимум **N** книг на руках (задается разработчиком).
+- Читателю нельзя выдавать:
+  - Книгу, которая уже есть у него на руках.
+  - Книгу, если превышен лимит книг.
+- В обоих случаях выводится уведомление с указанием причины.
+- При выдаче или возврате книги обновляется количество доступных экземпляров в библиотеке.
