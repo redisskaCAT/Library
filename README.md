@@ -4,7 +4,7 @@ This web application was developed as part of the **"Web Application Development
 
 
 ## Showcase
-<img src="https://github.com/redisskaCAT/Library/blob/main/showcase/Library.mp4?raw=true" width="640"/>
+<img src="https://github.com/redisskaCAT/Library/blob/main/showcase/Library.mp4" width="640"/>
 
 
 ## Technical Requirements
